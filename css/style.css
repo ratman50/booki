@@ -1,1 +1,261 @@
 @import url("./normalize.css");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: all ease .5s;
+    border: none;
+    scroll-behavior: smooth;
+}
+a{
+    color:black
+}
+
+.content
+{
+    padding: 0 2% 0 2%  ;
+}
+
+
+/* style header */
+.header
+{
+    padding: 3px;
+}
+
+.header__content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+
+.logo__img
+{
+    width: 100px;
+}
+.header__nav
+{
+    width: 50%;
+}
+.nav
+{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10%;
+    height: 100%;
+}
+.nav__item
+{
+    border-top: 2px solid transparent;
+    padding: 13px 13px 0 13px;
+}
+.nav__item:hover
+{
+    border-top: 2px solid #0065FC;
+    color: #0065FC;
+}
+.nav__item:hover .nav__link
+{
+    color: #0065FC;
+}
+.header__title
+{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.header__text
+{
+    font-weight: 300;
+}
+/* end style header */
+
+
+
+/* start style filter */
+.travel__filter
+{
+    padding: 2% 0 2% 0;
+}
+.filter__search-bar
+{
+    display:flex;
+
+}
+.search-bar__map
+{
+    padding: 14px;
+    background-color: #F2F2F2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.search-bar__input
+{
+    outline: none;
+    padding: 1%;
+}
+.search-bar__input::placeholder
+{
+    font-weight: bolder;
+    color: black;
+}
+.search-bar__button
+{
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.options__content
+{
+    padding:2% 0 2%;
+    display: flex;
+    gap: 4%;
+    align-items: center;
+}
+.option{
+    display: flex;
+    border: 2px solid #F2F2F2;
+    position: relative;
+    border-radius: 25px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.option::after
+{
+    content: "";
+    position: absolute;
+    left: 5px;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    display: block;
+    z-index: -1;
+    transition: width .6s ease-in-out;
+    background-color: #DEEBFF;
+}
+.option:hover::after
+{
+    width: 100%;
+}
+.option:hover .option__text
+{
+    color: #0065FC;
+}
+.option span 
+{
+    padding: 10px;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.option span i
+{
+    color: #0065FC;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: large;
+}
+.option__text
+{
+    padding: 14px;
+
+}
+.filter__info
+{
+    display: flex;
+    gap: 1.5%;
+    align-items: center;
+}
+.snip-logo
+{
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+    padding: 05px;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-info
+{
+    color: #0065FC;
+    font-size: 10px;    
+}
+.filter__text 
+{
+    font-weight: light;
+}
+
+/* end style filter */
+
+
+
+/* style result__country */
+
+.logements__results
+{
+    display: flex;
+    flex-direction: column;
+    gap:2%;
+}
+
+.result__country
+{
+    display: flex;
+    gap: 1%;
+    flex-wrap: wrap;
+}
+.hebergement{
+
+    padding: 10px;
+    background-color: #F2F2F2;
+    width: 69%;
+}
+.hebergement__content
+{
+    
+
+}
+.hebergement__cardHeb
+{
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.cardHeb__item
+{
+    /* flex: 0 0 13%; */
+    /* width:; */
+}
+.cardHeb__item__content
+{
+    padding: 5px;
+    border-radius: 13px;
+    background-color: white;
+}
+.cardHeb__item__img
+{
+    width: 270px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+/* end style result__country */

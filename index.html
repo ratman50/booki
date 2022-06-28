@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="site hebergement efficace pour permettre à tout chacun de se loger">
     <meta name="author" content="ratmans">
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- link font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
     <title>Booki</title>
 </head>
 <body>
@@ -17,12 +20,12 @@
             <div class="header__content">
 
                 <div class="header__logo">
-                    <img src="./assets/logo/Booki.png" alt="logo" >
+                    <img  class="logo__img"src="./assets/logo/Booki.png" alt="logo" >
                 </div>
-                <nav class="header__nav nav">
-                    <ul>
-                        <li><a href="#hebergement">Hébergements</a></li>
-                        <li><a href="#activities">Activités</a></li>
+                <nav class="header__nav ">
+                    <ul class="nav">
+                        <li class="nav__item"><a href="#hebergement"  class="nav__link">Hébergements</a></li>
+                        <li class="nav__item"  ><a href="#activities" class="nav__link">Activités</a></li>
                     </ul>
                 </nav>
             </div>
@@ -36,39 +39,42 @@
 
 
         <!-- start section travel -->
-        <section class="travel">
+        <div class="travel">
             <div class="travel__filter filter">
                 <form  class="filter__search-bar .search-bar">
-                    <div class="search-bar__content">
-                        <span class="search-bar__map"></span>
-                        <input type="text" class="search-bar__input">
+                   
+                        <span class="search-bar__map"><i class="fa-solid fa-location-dot"></i></span>
+                        <input type="text" 
+                        placeholder="Marseille, France"
+                        class="search-bar__input">
                         <button class="search-bar__button">Rechercher</button>
-                    </div>
+                    
                 </form>
                 <div class="filter__options">
                     <div class="options__content">
+                        <h3>Filtres</h3>
 
-                        <p >Filtres</p>
                         <div  class="option">
-                            <span><i></i></span>
-                            <p>Economique</p>
+                            <span><i class="fa-solid fa-money-bill-1-wave"></i></span>
+                            <p class="option__text">Economique</p>
                         </div>
                         <div  class="option">
-                            <span><i></i></span>
-                            <p>Familial</p>
+                            <span><i class="fa-solid fa-child-reaching"></i></span>
+                            <p class="option__text">Familial</p>
                         </div>
                         <div  class="option">
-                            <span><i></i></span>
-                            <p>Romantique</p>
+                            <span><i class="fa-solid fa-heart"></i></span>
+                            <p class="option__text">Romantique</p>
                         </div>
                         <div  class="option">
-                            <span><i></i></span>
-                            <p>Animaux autorisés</p>
+                            <span><i class="fa-solid fa-dog"></i></span>
+                            <p class="option__text">Animaux autorisés</p>
                         </div>
                     </div>
                     <div class="filter__info">
-                        <span><i></i></span>
+                        <span class="snip-logo"><i class="fa-solid fa-info"></i></span>
                         <p class="filter__text">
+                            
                             Plus  de 500 logements sont disponibles dans cette ville
                         </p>
                     </div>
@@ -78,7 +84,7 @@
                 <div class="result__country">
                     <main class="hebergement" id="hebergement">
                         
-                        <h2 class="hebergement__title">Hébergement à Marseille</h2>
+                        <h2 class="hebergement__title">Hébergements à Marseille</h2>
                         
                         <div class="hebergement__content">
                             <div class="hebergement__cardHeb ">
@@ -92,7 +98,7 @@
                                             <!-- md -->
                                             <source media="(min-width:768px)" srcset="./assets/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
                                             <!-- sm -->
-                                            <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
+                                            <source media="(min-width:576px)" srcset="./assets/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
 
                                             <img src="./assets/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
                                         </picture>
@@ -100,6 +106,11 @@
                                             <h3 class="cardHeb__item__title">Auberge  La Cannebière</h3>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star unchecked"></i>
 
                                             </div>
                                         </div>
@@ -124,6 +135,11 @@
                                             <h3 class="cardHeb__item__title">Hôtel de port</h3>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
 
                                             </div>
                                         </div>
@@ -147,7 +163,11 @@
                                             <h3 class="cardHeb__item__title">Hôtel Les mouettes</h3>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
-
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star unchecked"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -170,6 +190,11 @@
                                             <h3 class="cardHeb__item__title">Hôtel de la mer</h3>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star unchecked"></i>
+                                                <i class="fa-solid fa-star unchecked"></i>
+                                                <i class="fa-solid fa-star unchecked"></i>
 
                                             </div>
                                         </div>
@@ -193,6 +218,11 @@
                                             <h3 class="cardHeb__item__title">Auberge  Le Panier</h3>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star unchecked"></i>
 
                                             </div>
                                         </div>
@@ -216,6 +246,11 @@
                                             <h3 class="cardHeb__item__title">Hôtel chez Amina</h3>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
 
                                             </div>
                                         </div>
@@ -223,13 +258,14 @@
 
                                 </div>
                             </div>
+                            <button class="hebergement__plus">Afficher plus</button>
                         </div>
                     </main>
                     <aside class="popular" >
                         <div class="popular__content">
                             <div class="popular__info">
                                 <h2 class="popular__title">Les plus populaires</h2>
-                                <span class="popular__star"></span>
+                                <span class="popular__star"><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="popular__cardPop ">
                                 <div class="cardPop__content card">
@@ -249,7 +285,14 @@
                                                 <h3 class="cardPop__title">Hôtel Le soleil du matin</h3>
                                                 <p class="item_description">Nuit à partir de <span class="price">128 £</span></p>
                                             </div>
-                                            <div class="star"></div>
+                                            <div class="star">
+                                                                                                                                                                     <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+
+                                            </div>
                                         </div>
                                     </div>
                                 
@@ -267,10 +310,17 @@
                                             <img src="./assets/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
                                         </picture>                                            <div class="cardPop__text">
                                         <div class="cardPop__info">
-                                            <h3 class="cardPop__title"></h3>
+                                            <h3 class="cardPop__title">Au coeur de l'eau Chambre d'hôtes</h3>
                                             <p class="item_description">Nuit à partir de <span class="price">71 £</span></p>
                                         </div>
-                                        <div class="star"></div>
+                                        <div class="star">
+                                                                                                                                                                     <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star unchecked"></i>
+
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="cardPop__content card">
@@ -285,19 +335,28 @@
                                             <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">
 
                                             <img src="./assets/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
-                                        </picture>                                            <div class="cardPop__text">
+                                        </picture>                                            
+                                    <div class="cardPop__text">
                                         <div class="cardPop__info">
-                                            <h3 class="cardPop__title"></h3>
+                                            <h3 class="cardPop__title">Hôtel Tout bleu et Blanc</h3>
                                             <p class="item_description">Nuit à partir de <span class="price">68 £</span></p>
                                         </div>
-                                        <div class="star"></div>
+                                        <div class="star">
+                                                                                                                                                                     <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star checked"></i>
+                                                <i class="fa-solid fa-star unchecked"></i>
+
+                                        </div>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </aside>
-                    <aside class="activities" id="activities">
+                </div>
+                <aside class="activities" id="activities">
                         <h2 class="activities__title">Activités à Marseille</h2>
                         <div class="activities__content">
                             <div class="activities__cardAct card">
@@ -399,12 +458,13 @@
 
 
                         </div>
-                    </aside>
-                </div>
+                </aside>
             </div>
-        </section>
+        </div>
         <!-- end section travel -->
     </div>
+
+    <!-- start section footer -->
     <footer class="footer">
         <div class="footer__content">
 
@@ -444,5 +504,6 @@
             </section>
         </div>
     </footer>
+    <!-- end section footer -->
 </body>
 </html>
