@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="site hebergement efficace pour permettre à tout chacun de se loger">
+    <meta name="description" content="site hebergement efficace pour permettre à  chacun de se loger">
     <meta name="author" content="ratmans">
     <link rel="stylesheet" href="./css/style.css">
     <!-- link font-awesome -->
@@ -20,13 +20,18 @@
             <div class="header__content">
 
                 <div class="header__logo">
-                    <img  class="logo__img"src="./assets/logo/Booki.png" alt="logo" >
+                    <picture>
+                        <source media="(min-width:992px)" srcset="./assets/logo/Booki@3x.png">
+                        <source media="(min-width:568px)" srcset="./assets/logo/Booki.png">
+                        <img  class="logo__img" src="./assets/logo/Booki.png" alt="logo" >
+                    </picture>
                 </div>
                 <nav class="header__nav ">
                     <ul class="nav">
                         <li class="nav__item"><a href="#hebergement"  class="nav__link">Hébergements</a></li>
                         <li class="nav__item"  ><a href="#activities" class="nav__link">Activités</a></li>
                     </ul>
+
                 </nav>
             </div>
             <div class="header__description">
@@ -41,34 +46,38 @@
         <!-- start section travel -->
         <div class="travel">
             <div class="travel__filter filter">
-                <form  class="filter__search-bar .search-bar">
+                <form  class="filter__search-bar   search-bar">
                    
                         <span class="search-bar__map"><i class="fa-solid fa-location-dot"></i></span>
                         <input type="text" 
                         placeholder="Marseille, France"
                         class="search-bar__input">
-                        <button class="search-bar__button">Rechercher</button>
+                        <button class="search-bar__button large">Rechercher</button>
+                        <button class="search-bar__button sm"><i class="fa-solid fa-magnifying-glass"></i></button>
                     
                 </form>
                 <div class="filter__options">
                     <div class="options__content">
-                        <h3>Filtres</h3>
+                        <h2 class="options__title">Filtres</h2>
+                        <div class="options__group">
 
-                        <div  class="option">
-                            <span><i class="fa-solid fa-money-bill-1-wave"></i></span>
-                            <p class="option__text">Economique</p>
-                        </div>
-                        <div  class="option">
-                            <span><i class="fa-solid fa-child-reaching"></i></span>
-                            <p class="option__text">Familial</p>
-                        </div>
-                        <div  class="option">
-                            <span><i class="fa-solid fa-heart"></i></span>
-                            <p class="option__text">Romantique</p>
-                        </div>
-                        <div  class="option">
-                            <span><i class="fa-solid fa-dog"></i></span>
-                            <p class="option__text">Animaux autorisés</p>
+                            <div  class="option">
+                                <!-- enlever le span -->
+                                <span><i class="fa-solid fa-money-bill-1-wave"></i></span>
+                                <button class="option__button">Economique</button>
+                            </div>
+                            <div  class="option">
+                                <span><i class="fa-solid fa-child-reaching"></i></span>
+                                <button class="option__button">Familial</button>
+                            </div>
+                            <div  class="option">
+                                <span><i class="fa-solid fa-heart"></i></span>
+                                <button class="option__button">Romantique</button>
+                            </div>
+                            <div  class="option">
+                                <span><i class="fa-solid fa-dog"></i></span>
+                                <button class="option__button">Animaux autorisés</button>
+                            </div>
                         </div>
                     </div>
                     <div class="filter__info">
@@ -84,12 +93,12 @@
                 <div class="result__country">
                     <main class="hebergement" id="hebergement">
                         
-                        <h2 class="hebergement__title">Hébergements à Marseille</h2>
                         
                         <div class="hebergement__content">
+                            <h2 class="hebergement__title">Hébergements à Marseille</h2>
                             <div class="hebergement__cardHeb ">
-                                <div class="cardheb__item  card">
-                                    <div class="cardHeb__item__content">
+                                <article class="cardheb__item  effect">
+                                    <a href="#" class="cardHeb__item__content shadow">
                                         <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
@@ -100,10 +109,11 @@
                                             <!-- sm -->
                                             <source media="(min-width:576px)" srcset="./assets/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
 
-                                            <img src="./assets/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
+                                            <img src="./assets/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge  La Cannebière" class="cardHeb__item__img">
                                         </picture>
                                         <div class="cardHeb__item__text ">
-                                            <h3 class="cardHeb__item__title">Auberge  La Cannebière</h3>
+                                            <!-- modifier la balise h3 en h2 -->
+                                            <h2 class="cardHeb__item__title">Auberge  La Cannebière</h2>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
                                                 <i class="fa-solid fa-star checked"></i>
@@ -114,11 +124,11 @@
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
 
-                                </div>
-                                <div class="cardheb__item card">
-                                    <div class="cardHeb__item__content">
+                                </article>
+                                <article class="cardheb__item ">
+                                    <a href="#" class="cardHeb__item__content  shadow">
                                         <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg">
@@ -129,10 +139,10 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg">
 
-                                            <img src="./assets/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
+                                            <img src="./assets/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="hôtel de port" class="cardHeb__item__img">
                                         </picture>
                                         <div class="cardHeb__item__text">
-                                            <h3 class="cardHeb__item__title">Hôtel de port</h3>
+                                            <h2 class="cardHeb__item__title">Hôtel de port</h2>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
                                                 <i class="fa-solid fa-star checked"></i>
@@ -143,11 +153,11 @@
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
 
-                                </div>
-                                <div class="cardheb__item card">
-                                    <div class="cardHeb__item__content">
+                                </article>
+                                <article class="cardheb__item ">
+                                    <a href="#" class="cardHeb__item__content shadow">
                                         <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg">
@@ -158,9 +168,9 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg">
 
-                                            <img src="./assets/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
+                                            <img src="./assets/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les mouettes" class="cardHeb__item__img">
                                         </picture>                                        <div class="cardHeb__item__text">
-                                            <h3 class="cardHeb__item__title">Hôtel Les mouettes</h3>
+                                            <h2 class="cardHeb__item__title">Hôtel Les mouettes</h2>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
                                                 <i class="fa-solid fa-star checked"></i>
@@ -170,11 +180,11 @@
                                                 <i class="fa-solid fa-star unchecked"></i>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
 
-                                </div>
-                                <div class="cardheb__item card">
-                                    <div class="cardHeb__item__content">
+                                </article>
+                                 <article class="cardheb__item ">
+                                    <a href="#" class="cardHeb__item__content shadow">
                                         <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
@@ -185,9 +195,9 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
 
-                                            <img src="./assets/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
+                                            <img src="./assets/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hôtel de la mer" class="cardHeb__item__img">
                                         </picture>                                        <div class="cardHeb__item__text">
-                                            <h3 class="cardHeb__item__title">Hôtel de la mer</h3>
+                                            <h2 class="cardHeb__item__title">Hôtel de la mer</h2>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
                                                 <i class="fa-solid fa-star checked"></i>
@@ -198,11 +208,11 @@
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
 
-                                </div>
-                                <div class="cardheb__item card">
-                                    <div class="cardHeb__item__content">
+                                </article>
+                                 <article class="cardheb__item ">
+                                    <a href="#" class="cardHeb__item__content shadow">
                                         <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg">
@@ -213,9 +223,9 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg">
 
-                                            <img src="./assets/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
+                                            <img src="./assets/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge  Le Panier" class="cardHeb__item__img">
                                         </picture>                                        <div class="cardHeb__item__text">
-                                            <h3 class="cardHeb__item__title">Auberge  Le Panier</h3>
+                                            <h2 class="cardHeb__item__title">Auberge  Le Panier</h2>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
                                                 <i class="fa-solid fa-star checked"></i>
@@ -226,11 +236,11 @@
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
 
-                                </div>
-                                <div class="cardheb__item card">
-                                    <div class="cardHeb__item__content">
+                                </article>
+                                 <article class="cardheb__item ">
+                                    <a href="#" class="cardHeb__item__content shadow">
                                         <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
@@ -241,9 +251,9 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
 
-                                            <img src="./assets/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
+                                            <img src="./assets/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel chez Amina" class="cardHeb__item__img">
                                         </picture>                                        <div class="cardHeb__item__text">
-                                            <h3 class="cardHeb__item__title">Hôtel chez Amina</h3>
+                                            <h2 class="cardHeb__item__title">Hôtel chez Amina</h2>
                                             <p class="item_description">Nuit à partir  de <span class="price">25 £</span></p>
                                             <div class="cardHeb__item__star">
                                                 <i class="fa-solid fa-star checked"></i>
@@ -254,21 +264,21 @@
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
 
-                                </div>
-                            </div>
+                                </article>
+                             </div>
                             <button class="hebergement__plus">Afficher plus</button>
                         </div>
                     </main>
                     <aside class="popular" >
                         <div class="popular__content">
-                            <div class="popular__info">
+                             <div class="popular__info">
                                 <h2 class="popular__title">Les plus populaires</h2>
-                                <span class="popular__star"><i class="fa-solid fa-star"></i></span>
+                                <span class="popular__star"><i class="fa-solid fa-star black-star"></i></span>
                             </div>
                             <div class="popular__cardPop ">
-                                <div class="cardPop__content card">
+                                <article class="cardPop__content shadow">
                                         <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
@@ -279,24 +289,25 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
 
-                                            <img src="./assets/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
-                                        </picture>                                     <div class="cardPop__text">
+                                            <img src="./assets/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin" class="cardPop__img">
+                                        </picture>                                     
+                                        <div class="cardPop__text">
                                             <div class="cardPop__info">
                                                 <h3 class="cardPop__title">Hôtel Le soleil du matin</h3>
                                                 <p class="item_description">Nuit à partir de <span class="price">128 £</span></p>
                                             </div>
                                             <div class="star">
-                                                                                                                                                                     <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
+                                                                                                                                                                        <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
 
                                             </div>
                                         </div>
-                                    </div>
+                                </article>
                                 
-                                    <div class="cardPop__content card">
+                                <article class="cardPop__content shadow">
                                         <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg">
@@ -307,34 +318,34 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">
 
-                                            <img src="./assets/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
+                                            <img src="./assets/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au coeur de l'eau Chambre d'hôtes" class="cardPop__img">
                                         </picture>                                            <div class="cardPop__text">
                                         <div class="cardPop__info">
                                             <h3 class="cardPop__title">Au coeur de l'eau Chambre d'hôtes</h3>
                                             <p class="item_description">Nuit à partir de <span class="price">71 £</span></p>
                                         </div>
-                                        <div class="star">
-                                                                                                                                                                     <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star unchecked"></i>
+                                            <div class="star">
+                                                                                                                                                                        <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star unchecked"></i>
 
                                         </div>
                                     </div>
-                                </div>
-                                <div class="cardPop__content card">
+                                </article>
+                                <article class="cardPop__content shadow">
                                         <picture>
                                             <!-- xl -->
-                                            <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg">
+                                            <source media="(min-width:1200px)" srcset="./assets/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
                                             <!-- lg -->
-                                            <source media="(min-width:992px)" srcset="./assets/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg">
+                                            <source media="(min-width:992px)" srcset="./assets/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
                                             <!-- md -->
-                                            <source media="(min-width:768px)" srcset="./assets/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg">
+                                            <source media="(min-width:768px)" srcset="./assets/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
                                             <!-- sm -->
-                                            <source media="(min-width:768px)" srcset="./assets/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg">
+                                            <source media="(min-width:425px)" srcset="./assets/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg">
 
-                                            <img src="./assets/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="image chambre" class="cardHeb__item__img">
+                                            <img src="./assets/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Tout bleu et Blanc" class="cardPop__img">
                                         </picture>                                            
                                     <div class="cardPop__text">
                                         <div class="cardPop__info">
@@ -342,24 +353,24 @@
                                             <p class="item_description">Nuit à partir de <span class="price">68 £</span></p>
                                         </div>
                                         <div class="star">
-                                                                                                                                                                     <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star checked"></i>
-                                                <i class="fa-solid fa-star unchecked"></i>
+                                                                                                                                                                        <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star checked"></i>
+                                                    <i class="fa-solid fa-star unchecked"></i>
 
                                         </div>
                                     </div>
-                                </div>
+                                </article>
 
                             </div>
                         </div>
                     </aside>
                 </div>
-                <aside class="activities" id="activities">
+                <section class="activities" id="activities">
                         <h2 class="activities__title">Activités à Marseille</h2>
                         <div class="activities__content">
-                            <div class="activities__cardAct card">
+                            <div class=" quarter   shadow radius">
                                     <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
@@ -370,12 +381,12 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg">
 
-                                            <img src="./assets/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="image chambre" class="cardAct__img">
+                                            <img src="./assets/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" class="cardAct__img w-100 img_effect">
                                     </picture>      
                                 <h3 class="cardAct__title">Vieux Port</h3>
                             </div>
-                            <div class="cardAct__group">
-                                <div class="activities__cardAct card">
+                            <div class="cardAct__group quarter  ">
+                                <div class=" radius shadow ">
                                     <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg">
@@ -386,11 +397,11 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg">
 
-                                            <img src="./assets/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="image chambre" class="cardAct__img">
+                                            <img src="./assets/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomèges" class="cardAct__img_g1-1 w-100 img_effect">
                                     </picture>      
                                     <h3 class="cardAct__title">Fort de Pomèges</h3>
                                 </div>
-                                <div class="activities__cardAct card">
+                                <div class=" radius shadow">
                                     <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg">
@@ -401,13 +412,13 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg">
 
-                                            <img src="./assets/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="image chambre" class="cardAct__img">
+                                            <img src="./assets/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul" class=" cardAct__img_g1-2 w-100 img_effect">
                                     </picture>      
                                     <h3 class="cardAct__title">Îles du Frioul</h3>
                                 </div>
                             </div>
                             
-                            <div class="activities__cardAct card">
+                            <div class=" radius shadow quarter ">
                                     <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
@@ -418,13 +429,13 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg">
 
-                                            <img src="./assets/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="image chambre" class="cardAct__img">
+                                            <img src="./assets/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" class="cardAct__img w-100 img_effect">
                                     </picture>      
                                 <h3 class="cardAct__title">Parc National des Calanques</h3>
                             </div>
 
-                            <div class="cardAct__group">
-                                <div class="activities__cardAct card">
+                            <div class="cardAct__group quarter">
+                                <div class=" radius shadow ">
                                     <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg">
@@ -435,11 +446,11 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg">
 
-                                            <img src="./assets/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="image chambre" class="cardAct__img">
+                                            <img src="./assets/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" class="cardAct__img__g2-1 w-100 img_effect">
                                     </picture>      
                                     <h3 class="cardAct__title">Notre-Dame-de-la-Garde</h3>
                                 </div>
-                                <div class="activities__cardAct card">
+                                <div class=" radius shadow">
                                     <picture>
                                             <!-- xl -->
                                             <source media="(min-width:1200px)" srcset="./assets/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg">
@@ -450,7 +461,7 @@
                                             <!-- sm -->
                                             <source media="(min-width:768px)" srcset="./assets/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg">
 
-                                            <img src="./assets/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="image chambre" class="cardAct__img">
+                                            <img src="./assets/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" class="cardAct__img__g2-2 w-100 img_effect">
                                     </picture>      
                                     <h3 class="cardAct__title">Parc Longchamp</h3>
                                 </div>
@@ -458,7 +469,7 @@
 
 
                         </div>
-                </aside>
+                </section>
             </div>
         </div>
         <!-- end section travel -->
@@ -469,35 +480,35 @@
         <div class="footer__content">
 
             <section class="footer__items">
-                <h3 class="footer__items__title">A propos</h3>
+                <h2 class="footer__items__title">A propos</h2>
                 
                     <nav class="footer__items__content">
                         <ul>
-                            <li class="footer__item">Fonctionnement du site</li>
-                            <li class="footer__item">Conditions générale de vente</li>
-                            <li class="footer__item">Données et confidentialité</li>
+                            <li class="footer__item"><a href="#"> Fonctionnement du site</a></li>
+                            <li class="footer__item"> <a  href="#"> Conditions générale de vente</a></li>
+                            <li class="footer__item"><a href="#">Données et confidentialité</a></li>
                         </ul>
                     </nav>
                 
             </section>
             <section class="footer__items">
-                <h3 class="footer__items__title">Nos hébergements</h3>
+                <h2 class="footer__items__title">Nos hébergements</h2>
                 
                     <nav class="footer__items__content">
                         <ul>
-                            <li class="footer__item">Charte qualité</li>
-                            <li class="footer__item">Soumettre votre hôtel</li>
+                            <li class="footer__item"><a href="#">Charte qualité</a> </li>
+                            <li class="footer__item"><a href="#">Soumettre votre hôtel</a></li>
                         </ul>
                     </nav>
                 
             </section>
             <section class="footer__items">
-                <h3 class="footer__items__title">Assistance</h3>
+                <h2 class="footer__items__title">Assistance</h2>
                 
                     <nav class="footer__items__content">
                         <ul>
-                            <li class="footer__item">Centre d'aide</li>
-                            <li class="footer__item">Nous contacter</li>
+                            <li class="footer__item"><a href="#">Centre d'aide</a</li>
+                            <li class="footer__item"><a href="#">Nous contacter</a></li>
                         </ul>
                     </nav>
                 
