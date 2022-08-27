@@ -479,6 +479,46 @@ a{
 
 
 /* responsive */
+@media screen and (max-width:768px) {
+    .hebergement
+    {
+        background-color: transparent;
+    }
+    .hebergement__plus{
+        padding-bottom:10px ;
+    }
+    .hebergement,.popular{
+        padding: 0;
+        width: 100%;
+        border-radius: none;
+
+    }
+    .popular{
+        padding: 8px;
+    }
+    .popular__cardPop{
+        flex-direction: row;
+        padding: 8px;
+    }
+    .cardPop__content{
+        width: 30%;
+        flex-direction: column;
+    }
+    .cardPop__img{
+        width: 100%;
+        border-radius: 13px;
+    }
+    .activities__content{
+        flex-wrap: wrap;
+    }
+    .quarter{
+        flex:1 0 40%;
+    }
+    .footer__content{
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
 @media screen and (max-width:425px) {
     .content,.header__content,.travel
     {
@@ -549,6 +589,8 @@ a{
     }
     .popular__cardPop{
         gap: 13px;
+        flex-wrap: wrap;
+        padding: 0;
     }
     .cardPop__text{
         display: flex;
@@ -556,8 +598,9 @@ a{
         justify-content: space-between;
     }
     .cardPop__content{
-        width: 96%;
+        width: 100%;
         border-radius: 17px;
+        flex-direction: row;
     }
     .cardPop__title
     {
@@ -603,44 +646,4 @@ a{
 
 
 }
-@media screen and (max-width:768px) {
-    .hebergement
-    {
-        background-color: transparent;
-    }
-    .hebergement__plus{
-        padding-bottom:10px ;
-    }
-    .hebergement,.popular{
-        padding: 0;
-        width: 100%;
-        border-radius: none;
-
-    }
-    .popular{
-        padding: 8px;
-    }
-    .popular__cardPop{
-        flex-direction: row;
-        padding: 8px;
-    }
-    .cardPop__content{
-        width: 30%;
-        flex-direction: column;
-    }
-    .cardPop__img{
-        width: 100%;
-        border-radius: 13px;
-    }
-    .activities__content{
-        flex-wrap: wrap;
-    }
-    .quarter{
-        flex:1 0 40%;
-    }
-    .footer__content{
-        width: 90%;
-        justify-content: center;
-        align-items: center;
-    }
 }
