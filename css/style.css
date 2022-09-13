@@ -59,7 +59,7 @@ a{
 .nav__item
 {
     padding: 10px;
-    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
     /* width: 100%; */
     text-align: center;
     font-size: 1rem;
@@ -67,7 +67,7 @@ a{
 .nav__item:hover 
 {
     color: #0065FC;
-    border-bottom: 4px solid #0065FC;
+    border-top: 4px solid #0065FC;
 
 }
 .nav__item:hover  .nav__link{
@@ -216,7 +216,8 @@ a{
 }
 .filter__text 
 {
-    font-weight: light;
+    
+    font-weight: lighter;
 }
 
 /* end style filter */
@@ -236,13 +237,13 @@ a{
 {
     display: flex;
     gap: 1%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap ;
 }
 .hebergement{
 
     padding: 25px;
     background-color: #F2F2F2;
-    width: 57%;
+    width: 59%;
     gap:10px;
     display: flex;
     flex-direction: column;
@@ -309,11 +310,11 @@ a{
 }
 .fa-star
 {
-    color: #aea9a9;
+    color:#f2f2f2;
 }
 .checked
 {
-    color: blue;
+    color:#0065FC;
 }
 .price
 {
@@ -334,7 +335,7 @@ a{
 {
     padding: 20px;
     background-color: #F2F2F2;
-    width: 33%;
+    width:34%;
     border-radius: 13px;
 }
 .popular__content
@@ -373,13 +374,19 @@ a{
 .cardPop__img
 {
     width: 170px;
-    height: 120px;
+    height: 127px;
     border-top-left-radius: 13px;
     border-bottom-left-radius: 13px;
+}
+.item_description{
+    padding: 6px 0;
 }
 .cardPop__text
 {
     padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /* end section popular */
 
@@ -479,7 +486,10 @@ a{
 
 
 /* responsive */
-@media screen and (max-width:768px) {
+@media screen and (max-width:992px) {
+    .result__country{
+        flex-wrap: wrap;
+    }
     .hebergement
     {
         background-color: transparent;
@@ -490,18 +500,23 @@ a{
     .hebergement,.popular{
         padding: 0;
         width: 100%;
-        border-radius: none;
+        border-radius: initial;
 
     }
     .popular{
         padding: 8px;
     }
-    .popular__cardPop{
+    .popular__cardPop
+    {
         flex-direction: row;
         padding: 8px;
     }
-    .cardPop__content{
+    .popular__cardPop article{
+
         width: 30%;
+    }
+
+    .cardPop__content{
         flex-direction: column;
     }
     .cardPop__img{
@@ -519,7 +534,10 @@ a{
         justify-content: center;
         align-items: center;
     }
-@media screen and (max-width:425px) {
+@media screen and (max-width:768px) {
+    .cardHeb__item__img{
+        height:170px
+    }
     .content,.header__content,.travel
     {
         padding: 0;
@@ -589,14 +607,13 @@ a{
     }
     .popular__cardPop{
         gap: 13px;
+        flex-direction: column;
         flex-wrap: wrap;
         padding: 0;
     }
-    .cardPop__text{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+    .popular__cardPop article{
+        width: 98%;
+        }
     .cardPop__content{
         width: 100%;
         border-radius: 17px;
@@ -612,6 +629,10 @@ a{
     .cardPop__img
     {
         width: 120px;
+        border-radius: 0%;
+        border-bottom-left-radius: 13px;
+        border-top-left-radius: 13px;
+
     }
     .hebergement{
         order:3;
