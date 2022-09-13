@@ -520,7 +520,7 @@ a{
         flex-direction: column;
     }
     .cardPop__img{
-        width: 100%;
+        width: 130px;
         border-radius: 13px;
     }
     .activities__content{
@@ -628,7 +628,7 @@ a{
     }
     .cardPop__img
     {
-        width: 120px;
+        width: 200px;
         border-radius: 0%;
         border-bottom-left-radius: 13px;
         border-top-left-radius: 13px;
