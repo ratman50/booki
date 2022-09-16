@@ -129,8 +129,11 @@ a{
         display: none;
     }
 
-.options__title{
-    padding: 12px 0px;
+.options__content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .options__group
 {
@@ -494,6 +497,9 @@ a{
     {
         background-color: transparent;
     }
+    .options__title{
+        padding-top: 15px;
+    }
     .hebergement__plus{
         padding-bottom:10px ;
     }
@@ -520,7 +526,7 @@ a{
         flex-direction: column;
     }
     .cardPop__img{
-        width: 130px;
+        width: 100%;
         border-radius: 13px;
     }
     .activities__content{
@@ -571,8 +577,13 @@ a{
     .nav__item{
 
         width: 50%;
+        border-top: 0px;
         border-bottom: 4px solid #F2F2F2;
 
+    }
+    .nav__item:hover{
+        border-top: transparent;
+        border-bottom-color: #0065FC;
     }
     .search-bar{
         padding: 0 15px;
