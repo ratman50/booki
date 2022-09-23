@@ -374,6 +374,7 @@ a{
     width: 100%;
     border-radius: 13px;
 }
+
 .cardPop__img
 {
     width: 170px;
@@ -639,7 +640,7 @@ a{
     }
     .cardPop__img
     {
-        width: 200px;
+        width: 160px;
         border-radius: 0%;
         border-bottom-left-radius: 13px;
         border-top-left-radius: 13px;
